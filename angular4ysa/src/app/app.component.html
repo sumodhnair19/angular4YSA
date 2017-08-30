@@ -3,10 +3,15 @@
 		<th>ID</th>
 		<th>Name</th>
 		<th>Website</th>
+		<th>Checked</th>
 	</tr>
 	<tr *ngFor="let row of data">
 		<td>{{row.id}}</td>
 		<td>{{row.name}}</td>
 		<td><a href='{{row.navigation.url}}'> {{row.navigation.content}}</a></td>
+		<td>
+			<input type="checkbox" checked={{row.combo.checkStatus}}/>
+			<label>{{row.combo.labelText}}</label>
+		</td>
 	</tr>
 </table>
